@@ -28,7 +28,9 @@ export class Triangle implements Figure {
     const longest = Math.max(this.a, this.b, this.c);
 
     if (longest >= this.a + this.b + this.c - longest) {
-      throw new Error(`sides 1, 2 and 3 can't form a triangle`);
+      throw new Error(
+        `sides ${this.a}, ${this.b} and ${this.c} can't form a triangle`,
+      );
     }
   }
 
